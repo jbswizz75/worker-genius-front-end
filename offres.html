@@ -87,15 +87,32 @@
           </div>
           <!-- / -->
 
-          <!-- Sidebar Header -->
-          <div class="sidebar-content">
-            
+          <!-- Sidebar Content -->
+          <div class="sidebar-content top-50">
+            <h6 class="title-post-desc-offers">Descriptif du poste</h6>
+            <p class="textgroup-desc-offers">
+              Pour accompagner notre développement, nous recherchons un(e) développeur(se) web FullStack
+            </p>
+            <p class="textgroup-desc-offers">
+              <span class="subtitle-post-desc-offers">Missions :</span>
+                Développement de sites (basés sur les CMS Wordpress, Prestashop ou sur Symfony, Laravel, etc…)
+                Intégration et animation (HTML / CSS / jQuery).
+                Développement de scripts et de modules sur-mesure.
+                Développement d’applications mobiles hybrides.
+                Maintenance des sites et des infrastructures.
+                Développement de side-projects.
+            </p>
           </div>
           <!-- / -->
 
           <!-- Sidebar Header -->
           <div class="sidebar-footer">
-            <a href="#" class="card-btn-desc-offers" type="submit">Postuler</a>
+            <div class="row">
+              <div class="col-lg-4 border-test"></div>
+              <div class="col-lg-4 border-test align-content-center">
+                <a href="offres.html" class="card-btn-desc-offers shadow" type="submit">Postuler</a>
+              </div>
+              <div class="col-lg-4 border-test"></div>
           </div>
           <!-- / -->
 
@@ -319,9 +336,9 @@
 
     $('.sidebarCollapse').on('click', function () {
       // open sidebar
-      $('#sidebar').toggleClass('active');
+      $('#sidebar').addClass('active');
       // fade in the overlay
-      $('.overlay').toggleClass('active');
+      $('.overlay').addClass('active');
     });
 
     </script>

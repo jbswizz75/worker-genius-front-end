@@ -1,5 +1,9 @@
 /* -------------------- OFFERS DESCRIPTION --------------------*/
 
+.align-content-center {
+    align-content: center;
+}
+
 /* Header */
 
 .cross {
@@ -12,6 +16,7 @@
 }
 
 .sidebar-header h5 {
+    font-size: 22px;
     margin-top: 6px;
     text-align: center;
 }
@@ -34,16 +39,54 @@
 
 /* Content */
 
+.sidebar-content {
+    padding: 10px;
+    overflow: auto;
+}
+
+.title-post-desc-offers {
+    font-size: 25px;
+    font-weight: Bold;
+    text-transform: uppercase;
+}
+
+.textgroup-desc-offers {
+    text-align: justify;
+}
+
+.subtitle-post-desc-offers {
+    font-size: 16;
+    font-weight: bold;
+    text-transform: uppercase;
+}
 
 /* Footer */
+
+.sidebar-footer {
+    width: 100%;
+    position: absolute;
+}
+
 .card-btn-desc-offers {
-    padding: 5px;
+
+    padding: 10px;
     color: #382D91;
     text-align: center;
     border: 2px solid #382D91;
     border-radius: 50px;
 }
 
+.card-btn-desc-offers:hover {
+    cursor: pointer;
+    color: #382D91;
+    text-align: center;
+    border: none;
+    border-radius: 0px;
+}
+
+.border-test {
+    border: 1px solid #000;
+}
 /*#sidebarCollapse {
 }*/
 
