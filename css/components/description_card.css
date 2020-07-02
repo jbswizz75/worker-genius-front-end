@@ -4,14 +4,19 @@
     align-content: center;
 }
 
+.padding-15 {
+    padding: 15px;
+}
+
 /* Header */
 
 .cross {
     font-size: 25px;
+    color: #382D91;
 }
 
 .cross:hover {
-    font-size: 15px;
+    font-size: 23px;
     cursor: pointer;
 }
 
@@ -63,51 +68,51 @@
 /* Footer */
 
 .sidebar-footer {
-    width: 100%;
-    position: absolute;
+    margin: 0 auto;
+    bottom: 0;
+    padding: 10px;
 }
 
 .card-btn-desc-offers {
-
+    display: block;
+    margin: 0 auto;
+    justify-content: center;
     padding: 10px;
     color: #382D91;
     text-align: center;
     border: 2px solid #382D91;
     border-radius: 50px;
+    background-color: #fff;
 }
 
 .card-btn-desc-offers:hover {
     cursor: pointer;
     color: #382D91;
     text-align: center;
-    border: none;
-    border-radius: 0px;
+    text-decoration: none;
 }
 
-.border-test {
-    border: 1px solid #000;
-}
 /*#sidebarCollapse {
 }*/
 
-#sidebarCollapse span {
+.sidebarCollapse {
     transition: all 0.8s cubic-bezier(0.810, -0.330, 0.345, 1.375);
 }
 
-#sidebarCollapse span:first-of-type {
+.sidebarCollapse span:first-of-type {
     /* rotate first one */
     transform: rotate(45deg) translate(2px, 2px);
 }
-#sidebarCollapse span:nth-of-type(2) {
+.sidebarCollapse span:nth-of-type(2) {
     /* second one is not visible */
     opacity: 0;
 }
-#sidebarCollapse span:last-of-type {
+.sidebarCollapse span:last-of-type {
     /* rotate third one */
     transform: rotate(-45deg) translate(1px, -1px);
 }
 
-#sidebarCollapse.active span {
+.sidebarCollapse.active span {
     /* no rotation */
     transform: none;
     /* all bars are visible */
@@ -129,6 +134,7 @@
     border: 2px solid #382D91;
     transition: all 0.6s cubic-bezier(0.945, 0.020, 0.270, 0.665);
     transform-origin: center right; /* Set the transformed position of sidebar to center right side. */
+    cursor: pointer;
 }
 
 .hide {
@@ -186,25 +192,25 @@
        Removing the rotation from the first,
        last bars and reappear the second bar on default state, 
        and giving them a vertical margin */
-    #sidebarCollapse span:first-of-type,
-    #sidebarCollapse span:nth-of-type(2),
-    #sidebarCollapse span:last-of-type {
+    .sidebarCollapse span:first-of-type,
+    .sidebarCollapse span:nth-of-type(2),
+    .sidebarCollapse span:last-of-type {
         transform: none;
         opacity: 1;
         margin: 5px auto;
     }
 
     /* Removing the vertical margin and make the first and last bars rotate again when the sidebar is open, hiding the second bar */
-    #sidebarCollapse.active span {
+    .sidebarCollapse.active span {
         margin: 0 auto;
     }
-    #sidebarCollapse.active span:first-of-type {
+    .sidebarCollapse.active span:first-of-type {
         transform: rotate(45deg) translate(2px, 2px);
     }
-    #sidebarCollapse.active span:nth-of-type(2) {
+    .sidebarCollapse.active span:nth-of-type(2) {
         opacity: 0;
     }
-    #sidebarCollapse.active span:last-of-type {
+    .sidebarCollapse.active span:last-of-type {
         transform: rotate(-45deg) translate(1px, -1px);
     }
 }
