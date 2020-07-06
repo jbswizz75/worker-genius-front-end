@@ -1,10 +1,5 @@
 /* -------------------- OFFERS PAGE --------------------*/
 
-*:focus, *:before, *:after, input:focus, input:before, input:after {
-    outline: 0 none !important;
-    box-shadow: none;
-}
-
 /* // MARGINS // */
 
 .top-100 {
@@ -40,7 +35,16 @@
 * INPUT AND ICON: Search
 */
 
+input[type=text]:checked,
+input[type=text]:active, 
+input[type=text]:focus, 
+input[type=text]:before, 
+input[type=text]:after {
+    outline: 0!important;
+}
+
 input.search_offers {
+    width: 609px;
     height: 55px;
     border-top: 2px solid #382D91;
     border-bottom: 2px solid #382D91;
@@ -81,10 +85,6 @@ span.btn_map_offers{
     background: #fff;
 }
 
-.place-icon-color-offers {
-    color: #382D91;
-}
-
 /*
 * FILTERS: Contract
 */
@@ -98,21 +98,35 @@ span.btn_map_offers{
     border-left: 2px solid #382D91;    
 }
 
-.filters_contract_offers a {
+
+.filters_contract_offers a.dropdown-btn {
     color: #382D91;
     text-align: center;
+    text-decoration: none;
 }
 
-.filters_contract_offers a:hover {
+.filters_contract_offers a.dropdown-btn:hover {
     color: rgba(57, 45, 145, 0.507);
+}
+
+/* Contract Dropdown Menu */
+
+.filters_contract_offers .dropdown-item {
+    color: #382D91;
+    text-align: center;
     text-decoration: none;
+    cursor: pointer;
+}
+
+.filters_contract_offers .dropdown-item:hover {
+    color: #fff;
+    background: #382D91;
 }
 
 .contract-icon-color-offers {
     color: #382D91;
 }
 
-/* Contract Dropdown Menu */
 
 .filters_contract_offers .dropdown-menu {
     margin-top: 20px;
@@ -121,17 +135,13 @@ span.btn_map_offers{
 }
 
 .filters_contract_offers .dropdown-menu .dropdown-item .item-active {
-    border: 1px solid #382D91;
-    background: none!important;
+    color: #fff;
+    background: #382D91;
 }
 
 /*
 * FILTERS: Experience
 */
-
-input[type=text]:focus, input[type=text]:after {
-	outline: 0 none!important;
-}
 
 .filters_experience_offers {
     height: 55px;
@@ -245,9 +255,25 @@ div.card_offers {
     /*box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19);*/
 }
 
+.grid {
+    width: 1280px;
+    height: 100%;
+    display: inline-flex;
+}
+
+.grid-item {
+    width: 30%;
+    margin-bottom: 20px;
+}
+
 /*
 * CARD: Image
 */
+
+.card {
+    max-width: 340px;
+    justify-content: center;
+}
 
 .card:hover {
     cursor: pointer;
@@ -292,7 +318,7 @@ img.card-img-offers {
 }
 
 /*
-* CARD: Text block
+* CARD: Text Block
 */
 
 .card-block {
@@ -303,6 +329,15 @@ img.card-img-offers {
     border-right: 2px solid #382D91;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+}
+
+/*
+* CARD: Card Title
+*/
+
+h4.card-title {
+    margin-top: 15px;
+    text-align: center;
 }
 
 /*
@@ -335,14 +370,27 @@ img.card-img-offers {
     color: white;
 }
 
-/* More Offers */
+/*
+* CARD: Icons
+*/
+
+span i.place-icon-color-offers {
+    color: #382D91;
+}
+
+span i.contract-icon-color-offers {
+    color: #382D91;
+}
+
+
+/* Button More Offers */
 
 .btn-more-offers {
     display: block;
     margin: 20px auto;    
     justify-content: center;
     padding: 10px;
-    width: 150px;
+    max-width: 300px;
     color: #382D91;
     text-align: center;
     border: 2px solid #382D91;
@@ -360,23 +408,53 @@ img.card-img-offers {
 
 /* MEDIAQUERIES */
 
-@media (min-width: 576px) {
-    .card-columns {
-        column-count: 2;
-   }
+@media screen and (max-width: 639px) {
+
+    .d-inline-flex {
+        flex-direction: column;
+    }
+
+    .col {
+        margin: 0 auto;
+        transform: translateX(10%);
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+
 }
-@media (min-width: 768px) {
-    .card-columns {
-        column-count: 3;
+
+@media screen and (min-width: 640px) and (max-width: 992px) {
+
+    .d-inline-flex {
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    .col {
+        margin: 0 auto;
+        transform: translateX(45%);
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+
+}
+
+/*@media (min-width: 768px) {
+    .wrapper .d-inline-flex {
+        column-count: 1;
    }
 }
 @media (min-width: 992px) {
-    .card-columns {
-        column-count: 3;
+    .wrapper .d-inline-flex {
+        column-count: 1;
    }
 }
 @media (min-width: 1200px) {
-    .card-columns {
-        column-count: 3;
+    .wrapper .d-inline-flex .col {
+        column-count: 1;
    }
-}
+}*/

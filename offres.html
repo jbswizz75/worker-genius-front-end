@@ -8,6 +8,8 @@
 
         <title>Offres</title>
 
+        <link rel="icon" type="image/png" href="img/favicon/favicon-32x32.png">
+
         <!-- Own Link Style -->
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/offres.css">
@@ -72,7 +74,7 @@
                 <span class="cross"><i class="fas fa-times"></i></span>
               </div>
               <div class="col-md-5 card-title-desc-offers">
-                <h5>Description Card Title</h5>
+                <h5>Worker Genius</h5>
                 <p class="card-text-desc-offers">
                   Lieu : <span>Paris</span>
                   <span><i class="fas fa-map-marker-alt place-icon-color-offers" aria-hidden="true"></i></span>
@@ -96,7 +98,7 @@
 
           <!-- Sidebar Content -->
           <div class="sidebar-content top-50">
-            <h6 class="title-post-desc-offers">Descriptif du poste</h6>
+            <h6 class="title-post-desc-offers">Développeur FullStack</h6>
             <p class="textgroup-desc-offers">
               Pour accompagner notre développement, nous recherchons un(e) développeur(se) web FullStack
             </p>
@@ -155,24 +157,26 @@
                 <span class="input-group-text btn_submit_offers"><i class="fas fa-search submit-icon-color-offers"
                     aria-hidden="true"></i></span>
               </div>
-              <input class="form-control my-0 py-1 search_offers" type="text" placeholder="Rechercher une offre" aria-label="Recherche">
+              <input class="my-0 py-1 search_offers" type="text" placeholder="Rechercher une offre" aria-label="Recherche">
               <div class="input-group-prepend">
-                <span class="input-group-text btn_map_offers lighten-3"><i class="fas fa-map-marker-alt place-icon-color-offers"
-                    aria-hidden="true"></i></span>
+                <span class="input-group-text btn_map_offers lighten-3">
+                  <i class="fas fa-map-marker-alt place-icon-color-offers" aria-hidden="true"></i>
+                </span>
               </div>
-              <input class="form-control my-0 py-1 place_offers" type="text" placeholder="Où ?" aria-label="Lieu">
+              <input class="my-0 py-1 place_offers" type="text" placeholder="Où ?" aria-label="Lieu">
               <div class="md-form filters_contract_offers align-items-center">
-                <a class="dropdown-primary dropdown-toggle" href="#" role="button" 
+                <a class="dropdown-btn dropdown-toggle" href="#" role="button" 
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Contrats
                 </a>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                  <a class="dropdown-item item-active" href="#stage">Stage</a>
-                  <a class="dropdown-item" href="#alternance">Alternance</a>
-                  <a class="dropdown-item" href="#interime">Intérime</a>
-                  <a class="dropdown-item" href="#cdd">CDD</a>
-                  <a class="dropdown-item" href="#cdi">CDI</a>
-                  <a class="dropdown-item" href="#freelance">Freelance</a>
+                  <div class="dropdown-item item-active" data-filter="*">Tous les contrats</div>
+                  <div class="dropdown-item" data-filter=".stage">Stage</div>
+                  <div class="dropdown-item" data-filter=".alternance">Alternance</div>
+                  <div class="dropdown-item" data-filter=".interime">Intérime</div>
+                  <div class="dropdown-item" data-filter=".cdd">CDD</div>
+                  <div class="dropdown-item" data-filter=".cdi">CDI</div>
+                  <div class="dropdown-item" data-filter=".freelance">Freelance</div>
                 </div>
               </div>
               <div class="md-form filters_experience_offers">
@@ -186,7 +190,7 @@
                       <div class="range-value" id="rangeV"></div>
                       <b>1 an</b>
                       <div class="range-value" id="rangeV"></div>
-		                  <input id="range" type="range" min="1" max="5" value="0" step="1">
+		                  <input id="range" type="range" min="1" max="5" value="0" step="1" data-filter-group="year">
                       <b>+ 5 ans</b>
                     </div>
                   </form>
@@ -196,11 +200,11 @@
             <!-- / -->
 
             <!-- Cards -->
-            <div class="wrapper top-50">
-              <div class="row">
-                <div class="col">
+            <div id="card" class="wrapper top-50">
+              <div class="grid">
+                <div class="grid-item stage">
                   <div class="card card_offers shadow sidebarCollapse">
-                    <img class="card-img-top card-img-offers" src="img/cards/card_4.jpg" alt="Card image cap">
+                    <img class="card-img-top card-img-offers" src="img/logo-text.png" alt="Card image cap">
                     <div class="card-block">
                       <h4 class="card-title">Card title</h4>
                       <p class="card-text">
@@ -208,16 +212,16 @@
                         <span><i class="fas fa-map-marker-alt place-icon-color-offers" aria-hidden="true"></i></span>
                       </p>
                       <p class="card-text">
-                        Contrats : <span>CDD</span>
+                        Contrats : <span>Stage</span>
                         <span><i class="fas fa-file-signature contract-icon-color-offers" aria-hidden="true"></i></span>
                       </p>
                     </div>
                     <div class="card-badge danger_badge_offers"><span><i class="fas fa-exclamation"></i></span></div>
                   </div>
                 </div>
-                <div class="col">
-                  <div class="card card_offers shadow sidebarCollapse">
-                    <img class="card-img-top card-img-offers" src="img/cards/card_4.jpg" alt="Card image cap">
+                <div class="grid-item stage">
+                  <div class="card card_offers shadow sidebarCollapse ">
+                    <img class="card-img-top card-img-offers" src="img/logo-text.png" alt="Card image cap">
                     <div class="card-block">
                       <h4 class="card-title">Card title</h4>
                       <p class="card-text">
@@ -225,16 +229,16 @@
                         <span><i class="fas fa-map-marker-alt place-icon-color-offers" aria-hidden="true"></i></span>
                       </p>
                       <p class="card-text">
-                        Contrats : <span>CDD</span>
+                        Contrats : <span>Stage</span>
                         <span><i class="fas fa-file-signature contract-icon-color-offers" aria-hidden="true"></i></span>
                       </p>
                     </div>
                     <div class="card-badge warning_badge_offers"><span><i class="fas fa-ellipsis-h"></i></span></div>
                   </div>
                 </div>
-                <div class="col">
-                  <div class="card card_offers shadow sidebarCollapse">
-                    <img class="card-img-top card-img-offers" src="img/cards/card_4.jpg" alt="Card image cap">
+                <div class="grid-item stage">
+                  <div class="card card_offers shadow sidebarCollapse ">
+                    <img class="card-img-top card-img-offers" src="img/logo-text.png" alt="Card image cap">
                     <div class="card-block">
                       <h4 class="card-title">Card title</h4>
                       <p class="card-text">
@@ -242,19 +246,16 @@
                         <span><i class="fas fa-map-marker-alt place-icon-color-offers" aria-hidden="true"></i></span>
                       </p>
                       <p class="card-text">
-                        Contrats : <span>CDD</span>
+                        Contrats : <span>Stage</span>
                         <span><i class="fas fa-file-signature contract-icon-color-offers" aria-hidden="true"></i></span>
                       </p>
                     </div>
                     <div class="card-badge success_badge_offers"><span><i class="fas fa-check"></i></span></div>
                   </div>
                 </div>
-              </div>
-
-              <div class="row top-20">
-                <div class="col">
-                  <div class="card card_offers shadow sidebarCollapse">
-                    <img class="card-img-top card-img-offers" src="img/cards/card_4.jpg" alt="Card image cap">
+                <div class="grid-item alternance">
+                  <div class="card card_offers shadow sidebarCollapse ">
+                    <img class="card-img-top card-img-offers" src="img/logo-text.png" alt="Card image cap">
                     <div class="card-block">
                       <h4 class="card-title">Card title</h4>
                       <p class="card-text">
@@ -262,16 +263,16 @@
                         <span><i class="fas fa-map-marker-alt place-icon-color-offers" aria-hidden="true"></i></span>
                       </p>
                       <p class="card-text">
-                        Contrats : <span>CDD</span>
+                        Contrats : <span>Alternance</span>
                         <span><i class="fas fa-file-signature contract-icon-color-offers" aria-hidden="true"></i></span>
                       </p>
                     </div>
                     <div class="card-badge danger_badge_offers"><span><i class="fas fa-exclamation"></i></span></div>
                   </div>
                 </div>
-                <div class="col">
+                <div class="grid-item alternance">
                   <div class="card card_offers shadow sidebarCollapse">
-                    <img class="card-img-top card-img-offers" src="img/cards/card_4.jpg" alt="Card image cap">
+                    <img class="card-img-top card-img-offers" src="img/logo-text.png" alt="Card image cap">
                     <div class="card-block">
                       <h4 class="card-title">Card title</h4>
                       <p class="card-text">
@@ -279,16 +280,16 @@
                         <span><i class="fas fa-map-marker-alt place-icon-color-offers" aria-hidden="true"></i></span>
                       </p>
                       <p class="card-text">
-                        Contrats : <span>CDD</span>
+                        Contrats : <span>Alternance</span>
                         <span><i class="fas fa-file-signature contract-icon-color-offers" aria-hidden="true"></i></span>
                       </p>
                     </div>
                     <div class="card-badge warning_badge_offers"><span><i class="fas fa-ellipsis-h"></i></span></div>
                   </div>
                 </div>
-                <div class="col">
-                  <div class="card card_offers shadow sidebarCollapse">
-                    <img class="card-img-top card-img-offers" src="img/cards/card_4.jpg" alt="Card image cap">
+                <div class="grid-item alternance">
+                  <div class="card card_offers shadow sidebarCollapse freelance">
+                    <img class="card-img-top card-img-offers" src="img/logo-text.png" alt="Card image cap">
                     <div class="card-block">
                       <h4 class="card-title">Card title</h4>
                       <p class="card-text">
@@ -296,19 +297,67 @@
                         <span><i class="fas fa-map-marker-alt place-icon-color-offers" aria-hidden="true"></i></span>
                       </p>
                       <p class="card-text">
-                        Contrats : <span>CDD</span>
+                        Contrats : <span>Alternance</span>
                         <span><i class="fas fa-file-signature contract-icon-color-offers" aria-hidden="true"></i></span>
                       </p>
                     </div>
                     <div class="card-badge success_badge_offers"><span><i class="fas fa-check"></i></span></div>
                   </div>
                 </div>
-              </div>
-
-              <div class="row top-20">
-                <div class="col">
-                  <div class="card card_offers shadow sidebarCollapse">
-                    <img class="card-img-top card-img-offers" src="img/cards/card_4.jpg" alt="Card image cap">
+                <div class="grid-item interime">
+                  <div class="card card_offers shadow sidebarCollapse stage">
+                    <img class="card-img-top card-img-offers" src="img/logo-text.png" alt="Card image cap">
+                    <div class="card-block">
+                      <h4 class="card-title">Card title</h4>
+                      <p class="card-text">
+                        Lieu : <span>Paris</span>
+                        <span><i class="fas fa-map-marker-alt place-icon-color-offers" aria-hidden="true"></i></span>
+                      </p>
+                      <p class="card-text">
+                        Contrats : <span>Intérime</span>
+                        <span><i class="fas fa-file-signature contract-icon-color-offers" aria-hidden="true"></i></span>
+                      </p>
+                    </div>
+                    <div class="card-badge danger_badge_offers"><span><i class="fas fa-exclamation"></i></span></div>
+                  </div>
+                </div>
+                <div class="grid-item interime">
+                  <div class="card card_offers shadow sidebarCollapse stage">
+                    <img class="card-img-top card-img-offers" src="img/logo-text.png" alt="Card image cap">
+                    <div class="card-block">
+                      <h4 class="card-title">Card title</h4>
+                      <p class="card-text">
+                        Lieu : <span>Paris</span>
+                        <span><i class="fas fa-map-marker-alt place-icon-color-offers" aria-hidden="true"></i></span>
+                      </p>
+                      <p class="card-text">
+                        Contrats : <span>Intérime</span>
+                        <span><i class="fas fa-file-signature contract-icon-color-offers" aria-hidden="true"></i></span>
+                      </p>
+                    </div>
+                    <div class="card-badge warning_badge_offers"><span><i class="fas fa-ellipsis-h"></i></span></div>
+                  </div>
+                </div>
+                <div class="grid-item interime">
+                  <div class="card card_offers shadow sidebarCollapse stage">
+                    <img class="card-img-top card-img-offers" src="img/logo-text.png" alt="Card image cap">
+                    <div class="card-block">
+                      <h4 class="card-title">Card title</h4>
+                      <p class="card-text">
+                        Lieu : <span>Paris</span>
+                        <span><i class="fas fa-map-marker-alt place-icon-color-offers" aria-hidden="true"></i></span>
+                      </p>
+                      <p class="card-text">
+                        Contrats : <span>Intérime</span>
+                        <span><i class="fas fa-file-signature contract-icon-color-offers" aria-hidden="true"></i></span>
+                      </p>
+                    </div>
+                    <div class="card-badge success_badge_offers shadow"><span><i class="fas fa-check"></i></span></div>
+                  </div>
+                </div>
+                <div class="grid-item cdd">
+                  <div class="card card_offers shadow sidebarCollapse stage">
+                    <img class="card-img-top card-img-offers" src="img/logo-text.png" alt="Card image cap">
                     <div class="card-block">
                       <h4 class="card-title">Card title</h4>
                       <p class="card-text">
@@ -323,9 +372,9 @@
                     <div class="card-badge danger_badge_offers"><span><i class="fas fa-exclamation"></i></span></div>
                   </div>
                 </div>
-                <div class="col">
-                  <div class="card card_offers shadow sidebarCollapse">
-                    <img class="card-img-top card-img-offers" src="img/cards/card_4.jpg" alt="Card image cap">
+                <div class="grid-item cdd">
+                  <div class="card card_offers shadow sidebarCollapse stage">
+                    <img class="card-img-top card-img-offers" src="img/logo-text.png" alt="Card image cap">
                     <div class="card-block">
                       <h4 class="card-title">Card title</h4>
                       <p class="card-text">
@@ -340,9 +389,9 @@
                     <div class="card-badge warning_badge_offers"><span><i class="fas fa-ellipsis-h"></i></span></div>
                   </div>
                 </div>
-                <div class="col">
-                  <div class="card card_offers shadow sidebarCollapse">
-                    <img class="card-img-top card-img-offers" src="img/cards/card_4.jpg" alt="Card image cap">
+                <div class="grid-item cdd">
+                  <div class="card card_offers shadow sidebarCollapse stage">
+                    <img class="card-img-top card-img-offers" src="img/logo-text.png" alt="Card image cap">
                     <div class="card-block">
                       <h4 class="card-title">Card title</h4>
                       <p class="card-text">
@@ -357,12 +406,9 @@
                     <div class="card-badge success_badge_offers shadow"><span><i class="fas fa-check"></i></span></div>
                   </div>
                 </div>
-              </div>
-
-              <div class="row top-20">
-                <div class="col">
-                  <div class="card card_offers shadow sidebarCollapse">
-                    <img class="card-img-top card-img-offers" src="img/cards/card_4.jpg" alt="Card image cap">
+                <div class="grid-item cdi">
+                  <div class="card card_offers shadow sidebarCollapse stage">
+                    <img class="card-img-top card-img-offers" src="img/logo-text.png" alt="Card image cap">
                     <div class="card-block">
                       <h4 class="card-title">Card title</h4>
                       <p class="card-text">
@@ -370,16 +416,16 @@
                         <span><i class="fas fa-map-marker-alt place-icon-color-offers" aria-hidden="true"></i></span>
                       </p>
                       <p class="card-text">
-                        Contrats : <span>CDD</span>
+                        Contrats : <span>CDI</span>
                         <span><i class="fas fa-file-signature contract-icon-color-offers" aria-hidden="true"></i></span>
                       </p>
                     </div>
                     <div class="card-badge danger_badge_offers"><span><i class="fas fa-exclamation"></i></span></div>
                   </div>
                 </div>
-                <div class="col">
-                  <div class="card card_offers shadow sidebarCollapse">
-                    <img class="card-img-top card-img-offers" src="img/cards/card_4.jpg" alt="Card image cap">
+                <div class="grid-item cdi">
+                  <div class="card card_offers shadow sidebarCollapse stage">
+                    <img class="card-img-top card-img-offers" src="img/logo-text.png" alt="Card image cap">
                     <div class="card-block">
                       <h4 class="card-title">Card title</h4>
                       <p class="card-text">
@@ -387,16 +433,16 @@
                         <span><i class="fas fa-map-marker-alt place-icon-color-offers" aria-hidden="true"></i></span>
                       </p>
                       <p class="card-text">
-                        Contrats : <span>CDD</span>
+                        Contrats : <span>CDI</span>
                         <span><i class="fas fa-file-signature contract-icon-color-offers" aria-hidden="true"></i></span>
                       </p>
                     </div>
                     <div class="card-badge warning_badge_offers"><span><i class="fas fa-ellipsis-h"></i></span></div>
                   </div>
                 </div>
-                <div class="col">
-                  <div class="card card_offers shadow sidebarCollapse">
-                    <img class="card-img-top card-img-offers" src="img/cards/card_4.jpg" alt="Card image cap">
+                <div class="grid-item cdi">
+                  <div class="card card_offers shadow sidebarCollapse stage">
+                    <img class="card-img-top card-img-offers" src="img/logo-text.png" alt="Card image cap">
                     <div class="card-block">
                       <h4 class="card-title">Card title</h4>
                       <p class="card-text">
@@ -404,19 +450,16 @@
                         <span><i class="fas fa-map-marker-alt place-icon-color-offers" aria-hidden="true"></i></span>
                       </p>
                       <p class="card-text">
-                        Contrats : <span>CDD</span>
+                        Contrats : <span>CDI</span>
                         <span><i class="fas fa-file-signature contract-icon-color-offers" aria-hidden="true"></i></span>
                       </p>
                     </div>
                     <div class="card-badge success_badge_offers shadow"><span><i class="fas fa-check"></i></span></div>
                   </div>
                 </div>
-              </div>
-
-              <div class="row top-20">
-                <div class="col">
-                  <div class="card card_offers shadow sidebarCollapse">
-                    <img class="card-img-top card-img-offers" src="img/cards/card_4.jpg" alt="Card image cap">
+                <div class="grid-item freelance">
+                  <div class="card card_offers shadow sidebarCollapse stage">
+                    <img class="card-img-top card-img-offers" src="img/logo-text.png" alt="Card image cap">
                     <div class="card-block">
                       <h4 class="card-title">Card title</h4>
                       <p class="card-text">
@@ -424,16 +467,16 @@
                         <span><i class="fas fa-map-marker-alt place-icon-color-offers" aria-hidden="true"></i></span>
                       </p>
                       <p class="card-text">
-                        Contrats : <span>CDD</span>
+                        Contrats : <span>Freelance</span>
                         <span><i class="fas fa-file-signature contract-icon-color-offers" aria-hidden="true"></i></span>
                       </p>
                     </div>
                     <div class="card-badge danger_badge_offers"><span><i class="fas fa-exclamation"></i></span></div>
                   </div>
                 </div>
-                <div class="col">
-                  <div class="card card_offers shadow sidebarCollapse">
-                    <img class="card-img-top card-img-offers" src="img/cards/card_4.jpg" alt="Card image cap">
+                <div class="grid-item freelance">
+                  <div class="card card_offers shadow sidebarCollapse stage">
+                    <img class="card-img-top card-img-offers" src="img/logo-text.png" alt="Card image cap">
                     <div class="card-block">
                       <h4 class="card-title">Card title</h4>
                       <p class="card-text">
@@ -441,16 +484,16 @@
                         <span><i class="fas fa-map-marker-alt place-icon-color-offers" aria-hidden="true"></i></span>
                       </p>
                       <p class="card-text">
-                        Contrats : <span>CDD</span>
+                        Contrats : <span>Freelance</span>
                         <span><i class="fas fa-file-signature contract-icon-color-offers" aria-hidden="true"></i></span>
                       </p>
                     </div>
                     <div class="card-badge warning_badge_offers"><span><i class="fas fa-ellipsis-h"></i></span></div>
                   </div>
                 </div>
-                <div class="col">
-                  <div class="card card_offers shadow sidebarCollapse">
-                    <img class="card-img-top card-img-offers" src="img/cards/card_4.jpg" alt="Card image cap">
+                <div class="grid-item freelance">
+                  <div class="card card_offers shadow sidebarCollapse stage">
+                    <img class="card-img-top card-img-offers" src="img/logo-text.png" alt="Card image cap">
                     <div class="card-block">
                       <h4 class="card-title">Card title</h4>
                       <p class="card-text">
@@ -458,7 +501,7 @@
                         <span><i class="fas fa-map-marker-alt place-icon-color-offers" aria-hidden="true"></i></span>
                       </p>
                       <p class="card-text">
-                        Contrats : <span>CDD</span>
+                        Contrats : <span>Freelance</span>
                         <span><i class="fas fa-file-signature contract-icon-color-offers" aria-hidden="true"></i></span>
                       </p>
                     </div>
@@ -466,15 +509,19 @@
                   </div>
                 </div>
               </div>
-
             </div>
 
-            <a href="#" class="btn-more-offers">En voir plus...</a>
+            <a href="#" class="btn-more-offers">Afficher plus d'offres</a>
             
         </div>
-            
+           
+        <footer>
+          <p>Worker Genius @ copyright 2020</p>
+        </footer>
     </div>
     <div class="overlay"></div>
+
+    
 
     <!-- Bootstrap script -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -482,7 +529,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     
     <!-- Isotope script -->
-    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="js/isotope.pkgd.min.js" type="text/javascript"></script>
 
     <!-- Own script -->
     <script src="js/mobile_nav_mobile_button.js" type="text/javascript"></script>
@@ -504,6 +551,29 @@
     range.addEventListener('input', setValue);
     
     </script>
+
+    <script>
+
+      // init Isotope
+      $('.grid').isotope({
+        itemSelector: '.grid-item',
+        layoutMode: 'fitRows'
+      });
+
+      $('.dropdown-item').click(function() {
+        $('.dropdown-item').removeClass('item-active');
+        $(this).addClass('item-active');
+
+        var selector = $(this).attr('data-filter');
+        $('.grid').isotope({
+          filter: selector
+        });
+        return false;
+      });
+
+
+    </script>
+
 
 </body>
 </html>
